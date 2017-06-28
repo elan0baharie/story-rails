@@ -1,0 +1,11 @@
+
+
+<h1>Stories</h1>
+<% if @stories.any? %>
+<ul>
+  <% @stories.each do |story| %>
+    <li><%= link_to story.name, story_path(story)%></li>
+  <% end %>
+</ul>
+<% end %>
+<%= link_to "new", new_story_path  %>
